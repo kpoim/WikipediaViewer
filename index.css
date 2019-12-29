@@ -1,0 +1,166 @@
+html {
+    height: 100%;
+    background-color: #666;
+    color: #fff9f1;
+    font-family: "Lobster Two", cursive;
+    font-size: 22px;
+    user-select: none;
+  }
+  body {
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    max-width: 70vw;
+  }
+  footer {
+    padding: 10px 0;
+    font-style: italic;
+  }
+  #container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #666;
+  }
+  #title {
+    margin: 0;
+    font-style: italic;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  button,
+  input {
+    margin: auto;
+  }
+  .full {
+    font-size: 1.75em;
+    margin: auto;
+  }
+  #header {
+    display: grid;
+  }
+  .full #header {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-gap: 15vh;
+  }
+  .min #header {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    animation: changeopacity 1s;
+    grid-gap: 15vw;
+  }
+  @keyframes changeopacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  #search {
+    display: flex;
+  }
+  #search > * {
+    font-size: inherit;
+  }
+  #results {
+    display: none;
+  }
+  #searchfield {
+    border-width: 0 0 4px 0;
+    border-color: #333;
+    background-color: transparent;
+    color: #333;
+    outline: none;
+    font-family: "Lobster Two", cursive;
+    font-style: italic;
+  }
+  #searchfield:focus {
+    border-color: #fff9f1;
+  }
+  #search > button {
+    background-color: transparent;
+    cursor: pointer;
+    border-style: none;
+    color: #333;
+    outline: none;
+  }
+  #search > button :hover,
+  #searchfield:focus ~ #searchbutton,
+  #searchfield:focus {
+    color: #fff9f1;
+  }
+  #list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    font-family: "Oswald", sans-serif;
+  }
+  #list li {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #list a {
+    text-decoration: none;
+    color: #f8d89f;
+    font-family: "Lobster Two", cursive;
+    font-weight: 700;
+    font-size: 1.125em;
+    align-self: center;
+  }
+  #list a h3 {
+    font-style: italic;
+    display: inline-block;
+    margin: 15px 0 0;
+  }
+  #list a:hover h3 {
+    transform: scale(1.2);
+  }
+  ::selection {
+    background: #fff9f1;
+  }
+  @media screen and (max-width: 1024px) {
+    main {
+      max-width: 80vw;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    html {
+      font-size: 20px;
+    }
+    main {
+      max-width: 85vw;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    html {
+      font-size: 18px;
+    }
+    main {
+      max-width: 95vw;
+    }
+    #searchfield {
+      max-width: 12ch;
+    }
+    .min #header {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      grid-gap: 5vw;
+    }
+  }
+  
